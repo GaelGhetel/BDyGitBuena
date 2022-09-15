@@ -46,3 +46,20 @@ create procedure insertProducto(
 
 end;; 
 	
+delimiter ;;
+create procedure deleteProducto(in _idproducto int) 
+
+begin 
+
+delete from producto where idproducto=_idproducto; 
+
+END;; 
+
+delimiter ;;
+create procedure showProducto( in _nombre VARCHAR(250)) 
+
+begin 
+
+select * from Producto where nombre like _nombre order by nombre; 
+
+end;; 
